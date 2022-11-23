@@ -12,7 +12,6 @@ console.log(sentence1);
 }
 console.groupEnd();
 
-
 console.group('2. sun is in the sky');
 {
 let nouns = ['sun', 'sky']; 
