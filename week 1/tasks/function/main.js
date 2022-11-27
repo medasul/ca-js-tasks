@@ -21,16 +21,8 @@ console.groupCollapsed('2. Parašykite funkciją, kuri pašalina pirmą masyvo e
         array.length = array.length - 1;
         return firstElement;
     }
-
-    //  const numberrs = [1, 2 , 5, 7, 9];
-
     const rez1 = deleteElementFirst([7, 5, 9]);
     const rez2 = deleteElementFirst(['vienas', 'du', 'trys']);
-    //  console.log('numbers before removal: ' , numberrs)
-    // rez1 = deleteElementFirst(numberrs);
-    // console.log('after: ' , numberrs );
-    //console.log('removed first element: ' , rez1);
-
 
     console.log({ rez1, rez2 });
 
@@ -42,20 +34,12 @@ console.groupCollapsed('3. Parašykite funkciją, kuri grąžina paskutinį masy
 
     function ElementLast(array) {
         let lastElement = array[array.length - 1];
-        array[array.length - 1];
-        array.length = array.length - 1;
         return lastElement;
     }
 
     const rez1 = ElementLast([7, 5, 9]);
     const rez2 = ElementLast(['vienas', 'du', 'trys']);
     console.log({ rez1, rez2 });
-
-    // const numberrs = [1, 2 , 5, 7, 9];
-    //console.log('numbers before removal: ' , numberrs)
-    // rez1 = ElementLast(numberrs);
-    // console.log('after: ' , numberrs );
-    //console.log('removed last element: ' , rez1);
 }
 console.groupEnd();
 
@@ -63,6 +47,7 @@ console.groupCollapsed('4. Parašykite funkciją, kuri pašalina paskutinį masy
 {
     function deleteElementLast(array) {
         let lastElement = array[array.length - 1];
+        delete array[array.length - 1];
         array.length = array.length - 1;
         return lastElement;
     }
@@ -70,12 +55,6 @@ console.groupCollapsed('4. Parašykite funkciją, kuri pašalina paskutinį masy
     const rez1 = deleteElementLast([7, 5, 9]);
     const rez2 = deleteElementLast(['vienas', 'du', 'trys']);
     console.log({ rez1, rez2 });
-
-    // const numberrs = [1, 2 , 5, 7, 9];
-    //console.log('numbers before removal: ' , numberrs)
-    // rez1 = deleteElementLast(numberrs);
-    // console.log('after: ' , numberrs );
-    //console.log('removed first element: ' , rez1);
 
 }
 console.groupEnd();
@@ -98,8 +77,8 @@ console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio ma
         return array.length - 1;
     }
 
-    const rez1 = arrayLastIndex([7, 5, 9, 9, 5]); ///ats 4
-    const rez2 = arrayLastIndex(['vienas', 'du', 'trys']); ///ats 2
+    const rez1 = arrayLastIndex([7, 5, 9, 9, 5]); 
+    const rez2 = arrayLastIndex(['vienas', 'du', 'trys']); 
     console.log({ rez1, rez2 });
 }
 console.groupEnd();
@@ -112,7 +91,6 @@ console.groupCollapsed('7. Parašykite funkciją, kuri atspausdina kiekvieno mas
     }
 
     arrayIndex([7, 5, 9, 5, 9]);
-    console.log('next array');
     arrayIndex(['vienas', 'du', 'trys', 'keturi']);
 
 }
@@ -126,7 +104,6 @@ console.groupCollapsed('8. Parašykite funkciją, kuri atspausdina kiekvieno mas
     }
 
     arrayValue([7, 5, 9, 5, 9]);
-    console.log('next array');
     arrayValue(['vienas', 'du', 'trys', 'keturi']);
 }
 console.groupEnd();
@@ -142,7 +119,6 @@ console.groupCollapsed('9. Parašykite funkciją, kuri atspausdina kiekvieno mas
     }
 
     arrayIndexAndValue([7, 5, 9, 5, 9]);
-    console.log('next array');
     arrayIndexAndValue(['vienas', 'du', 'trys', 'keturi']);
 }
 console.groupEnd();
@@ -155,7 +131,6 @@ console.groupCollapsed('10. Parašykite funkciją, kuri atspausdina masyvo eleme
     }
 
     arrayValueReverse([7, 5, 9, 5, 9]);
-    console.log('next array');
     arrayValueReverse(['vienas', 'du', 'trys', 'keturi']);
 }
 console.groupEnd();
@@ -173,7 +148,6 @@ console.groupCollapsed('11. Parašykite funkciją, kuri atspausdina kiekvieno ma
     }
 
     arrayIndexOneLine([7, 5, 9, 5, 9]);
-    console.log('next array:');
     arrayIndexOneLine(['vienas', 'du', 'trys', 'keturi']);
 }
 console.groupEnd();
@@ -191,7 +165,6 @@ console.groupCollapsed('12. Parašykite funkciją, kuri atspausdina kiekvieno ma
 }
 
 arrayValueOneLine([7, 5, 9, 5, 9]);
-console.log('next array:');
 arrayValueOneLine(['vienas', 'du', 'trys', 'keturi']);
 }
 console.groupEnd();
@@ -202,13 +175,18 @@ console.groupCollapsed('13. Parašykite funkciją, kuri atspausdina kiekvieno ma
     function arrayIndexAndValueOneLine(array) {
         const space= " ";
         const leftBracket = "[";
-        const rihtSide = "]=>"
+        const rightBracket = "]=>";
+        let string3 = '';
 
+for (let i = 0; i <=array.length-1; i++)
+     {  if(i!=0) { string3=string3 + space + leftBracket + i + rightBracket + array[i];}
+        else {string3=string3 + leftBracket + i + rightBracket + array[i];}
+         };
+         console.log(string3);
         
     }
     
     arrayIndexAndValueOneLine([7, 5, 9, 5, 9]);
-    console.log('next array:');
     arrayIndexAndValueOneLine(['vienas', 'du', 'trys', 'keturi']);
     }
 
