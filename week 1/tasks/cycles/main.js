@@ -531,7 +531,6 @@ console.groupCollapsed('31. Atspausdinkite <numbers> masyvo kas antrą elementą
   for (let i = numbers.length - 2; i >= 0; i-=2) {
     console.log(numbers[i]);
   }
-
-  console.groupEnd();
 }
+console.groupEnd();
 console.groupEnd();
