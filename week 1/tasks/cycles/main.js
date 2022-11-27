@@ -190,12 +190,10 @@ console.groupCollapsed('WHILE');
   console.groupEnd();
   console.groupCollapsed('20. Atspausdinkite <numbers> masyvo elementus nuo pirmo iki paskutinio');
   {
-    let i = 2;
-    while (i >= -10) {
-      if (i % 1 == 0) {
-        console.log(i);
-      }
-      i -= 3;
+    let i = 0;
+    while (i <= numbers.length-1) {
+      console.log(numbers[i]);
+      i++;
     }
   }
   console.groupEnd();
@@ -355,7 +353,7 @@ console.groupCollapsed('FOR');
   console.groupEnd();
   console.groupCollapsed('8. Sukurkite ciklą kuris atspausdintų nuo 2 iki -3. Naudojant >');
   {
-    for (let i = 2; i > 4; i--) {
+    for (let i = 2; i > -4; i--) {
       console.log(i);
     }
   }
@@ -376,7 +374,7 @@ console.groupCollapsed('FOR');
   console.groupEnd();
   console.groupCollapsed('11. Sukurkite ciklą kuris atspausdintų nuo 2 iki -3. Naudojant >=');
   {
-    for (let i = 2; i >= 3; i--) {
+    for (let i = 2; i >= -3; i--) {
       console.log(i);
     }
   }
@@ -449,11 +447,11 @@ console.groupCollapsed('FOR');
 console.groupEnd();
 console.groupCollapsed('20. Atspausdinkite <numbers> masyvo elementus nuo pirmo iki paskutinio');
 {
-  for (let i = 2; i >= -10; i -= 3) {
-    if (i % 1 == 0) {
-      console.log(i);
+  let i = 0;
+    while (i <= numbers.length-1) {
+      console.log(numbers[i]);
+      i++;
     }
-  }
 }
 console.groupEnd();
 console.groupCollapsed('21. Atspausdinkite <numbers> masyvo elementus nuo 3 iki paskutinio');
