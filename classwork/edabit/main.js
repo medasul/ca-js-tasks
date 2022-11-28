@@ -3,7 +3,7 @@
 
 //EASY LEVEL;
 //taisoma
-console.group('1. https://edabit.com/challenge/Gz27eKkMcLarzE5Rj');
+console.group('1. https://edabit.com/challenge/XdAR3KohR5w7rjrFg');
 {
     function sumOfCubes(arr) {
 	let a=0;
