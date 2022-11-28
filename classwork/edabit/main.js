@@ -1,6 +1,36 @@
 //EASY LEVEL;
+
+
+//EASY LEVEL;
 //taisoma
 console.group('1. https://edabit.com/challenge/Gz27eKkMcLarzE5Rj');
+{
+    function sumOfCubes(arr) {
+	let a=0;
+for(i=0; i<arr.length; i++){
+     a=a+(arr[i]**3);
+}
+    console.log(a);
+    }
+
+    sumOfCubes([3, 4, 5]);
+    sumOfCubes([2]);
+    sumOfCubes([]);
+
+
+
+}
+
+console.groupEnd();
+
+
+
+
+
+
+
+//taisoma
+console.group('2. https://edabit.com/challenge/Gz27eKkMcLarzE5Rj');
 {
     function sortByLength(arr) {
         for (let i = 1; i < arr.length; i++) {
