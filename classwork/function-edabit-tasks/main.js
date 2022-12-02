@@ -85,4 +85,3 @@ console.group('3. https://edabit.com/challenge/Gz27eKkMcLarzE5Rj');
    }
        console.log(string1);*/
 console.groupEnd();
-
