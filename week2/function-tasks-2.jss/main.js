@@ -82,15 +82,17 @@ console.log('---');
     console.groupEnd();
     console.log();
 
-    /*
+   
     console.group('5. Atrinkti tiktai neigiamų elementų masyvą');
     console.log('---');
     {
         function filterNegatives(arr) {
             let arr2 = [];
+            let j=-1;
             for (let i = 0; i < arr.length; i++) {
-                if (arr[i] < 0) { arr2[i] = arr[i]; }
-                else break;
+                j++;
+                if (arr[i] < 0) { arr2[j] = arr[i]; }
+                else j--;
             }
             return arr2;
         }
@@ -108,9 +110,13 @@ console.log('---');
     {
         function filterEquals(arr) {
             let arr2 = [];
+            let j=-1;
             for (let i = 0; i < arr.length; i++) {
-                if (arr[i] % 2 === 0) { arr2[i] = arr[i]; }
+                j++;
+                if (arr[i] % 2 === 0) { arr2[j] = arr[i]; }
+                else j--;
             }
+            return arr2;
         }
          console.log({
           numbers,
@@ -126,11 +132,15 @@ console.log('---');
     {
         function filterOdds(arr) {
             let arr2 = [];
+            let j=-1;
             for (let i = 0; i < arr.length; i++) {
-                if (arr[i] % 2 != 0) { arr2[i] = arr[i]; }
-                else break;
+                j++;
+                if (arr[i] % 2 != 0) { arr2[j] = arr[i]; }
+                else j--;
             }
-        }
+            return arr2;
+            }
+        
          console.log({
            numbers,
            result: filterOdds(numbers)
@@ -311,4 +321,4 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd();
-    */
+   
