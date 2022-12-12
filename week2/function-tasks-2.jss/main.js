@@ -156,8 +156,9 @@ console.log('---');
             let arr2 = [];
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i] < 0) { arr2[i] = arr[i] * -1; }
-                else if (arr[i] < 0) { arr2[i] = arr[i]; };
+                else if (arr[i] >= 0) { arr2[i] = arr[i]; };
             }
+            return arr2;
         }
 
         console.log('---');
@@ -194,15 +195,18 @@ console.log('---');
     {
         function filterNaturals(arr) {
             let arr2 = [];
+            let j=-1;
             for (let i = 0; i < arr.length; i++) {
-                if (arr[i] % 1 != 0) { arr2[i] = arr[i]; }
-                else break;
+                j++;
+                if (arr[i] % 1 === 0) { arr2[j] = arr[i]; }
+                else j--;
             }
+            return arr2;
         }
-        // console.log({
-        //   numbers,
-        //   result: filterNaturals(numbers)
-        // });
+         console.log({
+           numbers,
+           result: filterNaturals(numbers)
+         });
     }
     console.log('---');
     console.groupEnd();
@@ -212,12 +216,16 @@ console.log('---');
     console.log('---');
     {
         function absArrElements(arr) {
-            // Jūsų kodas
+            let arr2 = [];
+            for (let i = 0; i < arr.length; i++) {
+                arr2[i] = Math.round(arr[i]);
+            }
+            return arr2;
         }
-        // console.log({
-        //   numbers,
-        //   result: absArrElements(numbers)
-        // });
+         console.log({
+           numbers,
+           result: absArrElements(numbers)
+         });
     }
     console.log('---');
     console.groupEnd()
@@ -226,12 +234,18 @@ console.log('---');
     console.log('---');
     {
         function filterEverySecond(arr) {
-            //  Jūsų kodas
+            let arr2 = [];
+            let j=-1;
+            for (let i = 0; i < arr.length; i+=2) {
+                j++;
+                arr2[j] = arr[i];
+            }
+            return arr2;
         }
-        // console.log({
-        //   numbers,
-        //   result: filterEverySecond(numbers)
-        // });
+         console.log({
+          numbers,
+           result: filterEverySecond(numbers)
+         });
     }
     console.log('---');
     console.groupEnd();
@@ -240,12 +254,18 @@ console.log('---');
     console.log('---');
     {
         function filterEveryFifth(arr) {
-            //  Jūsų kodas
+            let arr2 = [];
+            let j=-1;
+            for (let i = 0; i < arr.length; i+=5) {
+                j++;
+                arr2[j] = arr[i];
+            }
+            return arr2;
         }
-        // console.log({
-        //   numbers,
-        //   result: filterEveryFifth(numbers)
-        // });
+         console.log({
+           numbers,
+           result: filterEveryFifth(numbers)
+         });
     }
     console.log('---');
     console.groupEnd();
