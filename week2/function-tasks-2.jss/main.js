@@ -275,7 +275,13 @@ console.log('---');
     console.log('---');
     {
         function printArr(arr) {
-            // ... code
+            let string = '';
+            let s1 = '[';
+            let s2 = '] => ';
+
+            for (let i = 0; i<arr.length; i++)
+                 {console.log(string=s1 + i + s2 + arr[i]); }
+                
         }
         printArr(numbers);
     }
@@ -286,13 +292,17 @@ console.log('---');
     console.log('---');
     {
         function sumArr(arr) {
-            // Jūsų kodas
+            let sum=0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
         }
 
-        // console.log({
-        //   numbers,
-        //   result: sumArr(numbers)
-        // });
+         console.log({
+           numbers,
+           result: sumArr(numbers)
+         });
     }
     console.log('---');
     console.groupEnd()
@@ -301,13 +311,19 @@ console.log('---');
     console.log('---');
     {
         function avgArr(arr) {
-            // Jūsų kodas
+            let sum=0;
+            let avg;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            avg = sum/arr.length;
+            return avg;
         }
 
-        // console.log({
-        //   numbers,
-        //   result: avgArr(numbers)
-        // });
+         console.log({
+           numbers,
+          result: avgArr(numbers)
+         });
     }
     console.log('---');
     console.groupEnd()
@@ -316,13 +332,17 @@ console.log('---');
     console.log('---');
     {
         function arrMax(arr) {
-            //  Jūsų kodas
+            let numberMax=arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if(arr[i]>numberMax) numberMax = arr[i];
+            }
+            return numberMax;
         }
 
-        // console.log({
-        //   numbers,
-        //   result: arrMax(numbers)
-        // });
+         console.log({
+          numbers,
+           result: arrMax(numbers)
+         });
     }
     console.log('---');
     console.groupEnd()
@@ -331,13 +351,17 @@ console.log('---');
     console.log('---');
     {
         function arrMin(arr) {
-            //  Jūsų kodas
+            let numberMin=arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if(arr[i]<numberMin) numberMin = arr[i];
+            }
+            return numberMin;
         }
 
-        // console.log({
-        //   numbers,
-        //   result: arrMin(numbers)
-        // });
+         console.log({
+           numbers,
+           result: arrMin(numbers)
+         });
     }
     console.log('---');
     console.groupEnd();
