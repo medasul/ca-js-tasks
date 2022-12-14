@@ -224,7 +224,7 @@ console.log('---');
     console.log('---');
     console.groupEnd();
 
-/*
+
     console.group('14. Sukurti funkciją, kuri ima masyvą ir atspausdina kiekvieną jo reikšmę atskirai: [0] => 64. (nieko negrąžina)');
     console.log('---');
     {
@@ -233,8 +233,9 @@ console.log('---');
             let s1 = '[';
             let s2 = '] => ';
 
-            for (let i = 0; i<arr.length; i++)
-                 {console.log(string=s1 + i + s2 + arr[i]); }
+                arr.forEach((element, i) => {console.log(string=s1 + i + s2 + element);
+                    
+                }); 
                 
         }
         printArr(numbers);
@@ -246,11 +247,8 @@ console.log('---');
     console.log('---');
     {
         function sumArr(arr) {
-            let sum=0;
-            for (let i = 0; i < arr.length; i++) {
-                sum += arr[i];
-            }
-            return sum;
+          arr.reduce()
+            
         }
 
          console.log({
@@ -260,7 +258,7 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-
+/*
     console.group('16. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų vidurkį');
     console.log('---');
     {
