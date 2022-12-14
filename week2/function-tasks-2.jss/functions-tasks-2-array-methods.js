@@ -5,16 +5,12 @@ console.group('1. Padauginti masyvo narius iš 2 ir išsaugoti naujame masyve');
 console.log('---');
 {
     function mulArrBy2(arr) {
-        let arr2 = [];
-     //for (let i = 0; i < arr.length; i++) {
-           //arr2[i] = arr[i] * 2;
-         return arr2 = arr.map(x => x*2);   
+         return arr.map(x => x*2);   
     }
         console.log({
             numbers,
             result: mulArrBy2(numbers)
         });
-        console.log(numbers);
     }
     console.log('---');
     console.groupEnd();
@@ -24,8 +20,7 @@ console.log('---');
     console.log('---');
     {
         function powerArrBy2(arr) {
-            let arr2 = [];
-            return arr2 = arr.map(x => x**2);
+            return arr.map(x => x**2);
         }
         console.log({
             numbers,
@@ -40,12 +35,8 @@ console.log('---');
     console.log('---');
     {
         function mulArrElementsByIndex(arr) {
-            let arr2 = [];
             
-           // for (let i = 0; i < arr.length; i++) {
-            //    arr2[i] = arr[i] * i;
-           // }
-            return arr2  = arr.map((x, index) => x*index);
+            return  arr.map((x, index) => x*index);
         }
         console.log({
             numbers,
@@ -74,24 +65,21 @@ console.log('---');
     console.groupEnd();
     console.log();
 
-   /*
+   
     console.group('5. Atrinkti tiktai neigiamų elementų masyvą');
     console.log('---');
     {
         function filterNegatives(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i++) {
-                j++;
-                if (arr[i] < 0) { arr2[j] = arr[i]; }
-                else j--;
-            }
-            return arr2;
-        }
+           
+            return arr < 0;
+ 
+         }
+         const filterNegative = numbers.filter(filterNegatives);
          console.log({
-           numbers,
-           result: filterNegatives(numbers)
+             numbers,
+             result: filterNegative
          });
+         
     }
     console.log('---');
     console.groupEnd();
@@ -100,20 +88,17 @@ console.log('---');
     console.group('6. Atrinkti tiktai lyginių skaičių masyvą');
     console.log('---');
     {
-        function filterEquals(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i++) {
-                j++;
-                if (arr[i] % 2 === 0) { arr2[j] = arr[i]; }
-                else j--;
-            }
-            return arr2;
-        }
-         console.log({
-          numbers,
-           result: filterEquals(numbers)
-         });
+      
+            function filterEquals(arr) {
+           
+                return arr % 2 === 0;
+     
+             }
+             const filterEqual = numbers.filter(filterEquals);
+             console.log({
+                 numbers,
+                 result: filterEqual
+             });
     }
     console.log('---');
     console.groupEnd();
@@ -122,21 +107,16 @@ console.log('---');
     console.group('7. Atrinkti tiktai nelyginių skaičių masyvą');
     console.log('---');
     {
-        function filterOdds(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i++) {
-                j++;
-                if (arr[i] % 2 != 0) { arr2[j] = arr[i]; }
-                else j--;
-            }
-            return arr2;
-            }
-        
-         console.log({
-           numbers,
-           result: filterOdds(numbers)
-         });
+            function filterOdds(arr) {
+           
+                return arr % 2 !== 0;
+     
+             }
+             const filterOdd = numbers.filter(filterOdds);
+             console.log({
+                 numbers,
+                 result: filterOdd
+             });
     }
     console.log('---');
     console.groupEnd();
@@ -145,24 +125,20 @@ console.log('---');
     console.group("8. Visas neigiamas vertes masyve padaryti teigiamomis ir išsaugoti į naują masyvą");
     {
         function arrAbsoluteValues(arr) {
-            let arr2 = [];
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] < 0) { arr2[i] = arr[i] * -1; }
-                else if (arr[i] >= 0) { arr2[i] = arr[i]; };
-            }
-            return arr2;
+            if (arr < 0) { return arr* -1; }
+            else if (arr >= 0) { return arr; };
         }
-
+ numbers.map(arrAbsoluteValues)
         console.log('---');
         console.log({
             numbers,
-            result: arrAbsoluteValues(numbers)
+            result: numbers.map(arrAbsoluteValues)
         });
         console.log('---');
     }
     console.groupEnd();
     console.log();
-
+/*
     console.group('9. Pakelti visas masyvo reikšmes laipsniu \'index\' ir išsaugoti naujame masyve');
     console.log('---');
     {
