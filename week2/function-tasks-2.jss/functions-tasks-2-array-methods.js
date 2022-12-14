@@ -138,21 +138,19 @@ console.log('---');
     }
     console.groupEnd();
     console.log();
-/*
+
     console.group('9. Pakelti visas masyvo reikšmes laipsniu \'index\' ir išsaugoti naujame masyve');
     console.log('---');
     {
-        function powArrElementsByIndex(arr) {
-            let arr2 = [];
-            for (let i = 0; i < arr.length; i++) {
-                arr2[i] = arr[i] ** i;
+            function powArrElementsByIndex(arr) {
+            
+                return  arr.map((x, index) => x**index);
             }
-            return arr2;
-        }
-        console.log({
-          numbers,
-           result: powArrElementsByIndex(numbers)
-         });
+            console.log({
+                numbers,
+                result: powArrElementsByIndex(numbers)
+            });
+    
     }
     console.log('---');
     console.groupEnd();
@@ -161,20 +159,17 @@ console.log('---');
     console.group('10. Atrinkti tik natūralių skaičių masyvą');
     console.log('---');
     {
-        function filterNaturals(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i++) {
-                j++;
-                if (arr[i] % 1 === 0) { arr2[j] = arr[i]; }
-                else j--;
-            }
-            return arr2;
-        }
-         console.log({
-           numbers,
-           result: filterNaturals(numbers)
-         });
+            function filterNaturals(arr) {
+           
+                return arr % 1 === 0;
+     
+             }
+             const filterOdd = numbers.filter(filterNaturals);
+             console.log({
+                 numbers,
+                 result: filterOdd
+             });
+       
     }
     console.log('---');
     console.groupEnd();
@@ -183,17 +178,13 @@ console.log('---');
     console.group('11. Suapvalinti visas masyvo reikšmes iki sveikų skaičių ir išsaugoti naujame masyve');
     console.log('---');
     {
-        function absArrElements(arr) {
-            let arr2 = [];
-            for (let i = 0; i < arr.length; i++) {
-                arr2[i] = Math.round(arr[i]);
-            }
-            return arr2;
-        }
-         console.log({
-           numbers,
-           result: absArrElements(numbers)
-         });
+            function absArrElements(arr) {
+                return arr.map(x => Math.round(x));   
+           }
+               console.log({
+                   numbers,
+                   result: absArrElements(numbers)
+               });
     }
     console.log('---');
     console.groupEnd()
@@ -201,19 +192,17 @@ console.log('---');
     console.group('12. Atrinkti kas antrą elementą');
     console.log('---');
     {
-        function filterEverySecond(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i+=2) {
-                j++;
-                arr2[j] = arr[i];
-            }
-            return arr2;
-        }
-         console.log({
-          numbers,
-           result: filterEverySecond(numbers)
-         });
+            function filterEverySecond(arr) {
+           
+                    return arr.filter((x, i) => i % 2 === 0);
+         
+                 }
+               
+                 console.log({
+                     numbers,
+                     result: filterEverySecond(numbers)
+                 });
+
     }
     console.log('---');
     console.groupEnd();
@@ -222,23 +211,20 @@ console.log('---');
     console.log('---');
     {
         function filterEveryFifth(arr) {
-            let arr2 = [];
-            let j=-1;
-            for (let i = 0; i < arr.length; i+=5) {
-                j++;
-                arr2[j] = arr[i];
-            }
-            return arr2;
-        }
-         console.log({
-           numbers,
-           result: filterEveryFifth(numbers)
-         });
+
+                return arr.filter((x, i) => i % 5 === 0);
+     
+             }
+           
+             console.log({
+                 numbers,
+                 result: filterEveryFifth(numbers)
+             });
     }
     console.log('---');
     console.groupEnd();
 
-
+/*
     console.group('14. Sukurti funkciją, kuri ima masyvą ir atspausdina kiekvieną jo reikšmę atskirai: [0] => 64. (nieko negrąžina)');
     console.log('---');
     {
