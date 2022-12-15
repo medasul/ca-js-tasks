@@ -95,26 +95,101 @@ console.group('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
 }
 console.groupEnd();
 
-console.groupCollapsed('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
+console.group('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
 {
+    function calculateDifference(obj, x) {
+       const valueARR=Object.values(obj);
+        let objsum = 0;
+        for (let i = 0; i < valueARR.length; i++) {
+            objsum += valueARR[i];
+        }
+
+        return objsum-x;
+    }
+
+    console.log(calculateDifference({ "baseball bat": 20 }, 5));
+    console.log(calculateDifference({ skate: 10, painting: 20 }, 19));
+    console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400))
+    ///ats: 15; 11; 1
 
 }
 console.groupEnd();
 
-console.groupCollapsed('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
+console.group('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
 {
+    function toArray(obj) {
+       return Object.entries(obj);
+       
+    }
+    console.log(toArray({ a: 1, b: 2 }));
+    console.log(toArray({ shrimp: 15, tots: 12 }));
+    console.log(toArray({}));
 
 }
 console.groupEnd();
 
-console.groupCollapsed('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
+console.group('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
 {
+    function inkLevels(obj) {
+        return Math.min(obj.cyan, obj.magenta, obj.yellow)
+    }
 
+    console.log(
+        inkLevels({
+            "cyan": 23,
+            "magenta": 12,
+            "yellow": 10
+        }));
+    console.log(
+        inkLevels({
+            "cyan": 432,
+            "magenta": 543,
+            "yellow": 777
+        }));
+    console.log(
+        inkLevels({
+            "cyan": 700,
+            "magenta": 700,
+            "yellow": 0
+        }));
+
+    ///ans: 10; 432;0
 }
 console.groupEnd();
 
-console.groupCollapsed('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
+console.group('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
 {
+    function calculateLosses(obj, name, value) {
+        let array2 = Object.values(obj);
+        if (array2.length === 0) {
+            return "Lucky you!"
+        }
+        else {
+            let maxScore = 0;
+            obj[name] = value;
+        for (let i = 0; i <array2.length; i++) {
+            maxScore += array2[i];}
+        return maxScore;} 
+       }
 
-}
+        const stolenItems1 = {
+            tv: 30,
+            skate: 20,
+            stereo: 50,
+          } //➞ 100
+          
+          const stolenItems2 = {
+            painting: 20000,
+          } //➞ 20000
+          
+          const stolenItems3 = {} //➞ "Lucky you!"
+
+          console.log(calculateLosses(stolenItems1));
+          console.log(calculateLosses(stolenItems2));
+          console.log(calculateLosses(stolenItems3));
+    }
+
+    
+   
+
 console.groupEnd();
