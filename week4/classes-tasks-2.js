@@ -1,18 +1,84 @@
-console.groupCollapsed('1. - https://edabit.com/challenge/ZngT4zDckDugt2JGY');
+console.group('1. - https://edabit.com/challenge/ZngT4zDckDugt2JGY');
 {
-  // ... code
+class Player {
+    name;
+    age;
+    height;
+    weight;
+    constructor (name, age, height, weight){
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
+    }
+    
+    get Age() {
+		return `${this.name} is age ${this.age}`;}
+	get Height() {
+		return `${this.name} is ${this.height}cm`;}
+	get Weight() {
+		return `${this.name} weighs ${this.weight}kg`;}
+      }
+
+  p1 = new Player("David Jones", 25, 175, 75);
+  console.log(p1.Age) //➞ "David Jones is age 25"
+  console.log(p1.Height) //➞ "David Jones is 175cm"
+  console.log(p1.Weight) //➞ "David Jones weighs 75kg"
+
 }
 console.groupEnd();
 
-console.groupCollapsed('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
+console.group('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
 {
-  // ... code
+  class Calculator {
+   
+    add(x, y) {
+      return x+y;
+    };
+    subtract(x, y) {
+      return x-y;
+    };
+    multiply(x, y) {
+      return x*y;
+    };
+    divide(x,y) {
+      return x/y;
+    };
+  }
+
+  let calculator = new Calculator()
+ console.log( calculator.add(10, 5))      //  ➞ 15
+ console.log(calculator.subtract(10, 5)) // ➞ 5
+ console.log(calculator.multiply(10, 5)) //➞ 50
+ console.log(calculator.divide(10, 5))   //➞ 2
 }
 console.groupEnd();
 
-console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
+console.group('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
 {
-  // ... code
+  class Employee {
+    constructor (firstname, lastname) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+      }
+
+    get nameSurname(){
+      return `${this.firstname} ${this.lastname}`;  
+    }
+    get email(){
+      return `${this.firstname.toLowerCase()}.${this.lastname.toLowerCase()}@company.com`  
+    }
+  }
+  
+  let emp1 =new Employee("John", "Smith")
+  console.log(emp1.nameSurname) //➞ "John Smith"
+  
+  let emp2 =new Employee("Mary",  "Sue")
+  console.log(emp2.email) //➞ "mary.sue@company.com"
+  
+ let emp3 =new Employee("Antony", "Walker")
+  console.log(emp3.firstname) //➞ "Antony"
+
 }
 console.groupEnd();
 

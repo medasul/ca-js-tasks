@@ -203,7 +203,8 @@ const students = [
   
   console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
   {
-    // ... sprendimas ir spausdinimas
+
+    
   }
   console.groupEnd();
   
