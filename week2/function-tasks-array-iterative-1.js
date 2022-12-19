@@ -185,11 +185,21 @@ const people = [
 
     function incomeToSalary(arr)
     {
-        arr.forEach((el, i) => {
-            const sal = 'salary';
-           arr[i].income = sal;
-            console.log(arr[i]);
-        });
+          const updatedArray = arr.map(obj => {
+            return {
+              name: obj.name ,
+              surname: obj.surname,
+              sex: obj.sex,
+              age: obj.age,
+              salary: obj.income,
+              married: obj.married,
+              hasCar: obj.hasCar
+              
+            }
+          });
+          
+          console.log(updatedArray);
+         
     }
 
     incomeToSalary(people);
