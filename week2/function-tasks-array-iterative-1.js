@@ -129,25 +129,29 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('7. Atspausdinkite visas moteris');
+  console.group('7. Atspausdinkite visas moteris');
+  {
+    function printFemales(arr)
+    { return arr.sex === 'female';
+    }
+ console.log('\n Visos moterys:')
+    console.table(people.filter(printFemales));
+  }
+  console.groupEnd();
+  
+  console.group('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
   {
     // ...sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
+  console.group('9. Atspausdinkite žmones kurie yra susituokę');
   {
     // ...sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
-  {
-    // ...sprendimas ir spausdinimas
-  }
-  console.groupEnd();
-  
-  console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
+  console.group('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
   {
     // ...sprendimas ir spausdinimas
   }
