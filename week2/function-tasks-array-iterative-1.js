@@ -85,7 +85,7 @@ const people = [
     function printNameSurnameStatus(arr)
     {
         arr.forEach(el => {
-            console.log(`${el.name} ${el.surname}  \n married (true/false): ${el.married}`);
+            console.log(`${el.name} ${el.surname}  \n married (true/false): %c${el.married}`, 'color: red');
         });
     }
 
@@ -98,7 +98,7 @@ const people = [
     function printSexAndIncome(arr)
     {
         arr.forEach((el, i) => {
-            console.log(`${i+1}. ${el.sex} income - ${el.income}`);
+            console.log(`${i+1}. ${el.sex} income - %c${el.income}`, 'color: red');
         });
     }
 
@@ -106,15 +106,26 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('5. Sukurtite masyvą su vardais, pavardėmis ir lytimi, pagal pradinį žmonių masyvą');
+  console.group('5. Sukurtite masyvą su vardais, pavardėmis ir lytimi, pagal pradinį žmonių masyvą');
   {
-    // ...sprendimas ir spausdinimas
+    function printNameSurnameSex(arr)
+    {
+        arr.forEach(el => {
+            console.log(`${el.name} ${el.surname} is %c${el.sex}`, 'color: red');
+        });
+    }
+
+    printNameSurnameSex(people);
   }
   console.groupEnd();
   
   console.group('6. Atspausdinkite visus vyrus');
   {
-    
+    function printMales(arr)
+    { return arr.sex === 'male';
+    }
+ console.log('\n Visi vyrai:')
+    console.table(people.filter(printMales));
   }
   console.groupEnd();
   
