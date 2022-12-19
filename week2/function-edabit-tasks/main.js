@@ -1,4 +1,4 @@
-
+//easy 
 console.group('1. https://edabit.com/challenge/XdAR3KohR5w7rjrFg');
 {  console.log('\n-----Sum of Cubes------')
     function sumOfCubes(arr) {
@@ -99,6 +99,21 @@ function minMax(arr) {
 console.log(minMax([1, 2, 3, 4, 5])) //➞ [1, 5]
 console.log(minMax([2334454, 5])) // ➞ [5, 2334454]
 console.log(minMax([1])) //➞ [1, 1]
+}
+console.groupEnd();
+
+//medium
+
+console.group('https://edabit.com/challenge/GLbuMfTtDWwDv2F73');
+{ console.log('\n-----How Much is True?------')
+    
+function countTrue(arr) {
+  return arr.filter((el)=> el===true).length
+}
+
+console.log(countTrue([true, false, false, true, false])) // ➞ 2
+console.log(countTrue([false, false, false, false])) // ➞ 0
+console.log(countTrue([]) ) // ➞ 0
 }
 console.groupEnd();
 

@@ -124,7 +124,7 @@ const people = [
     function printMales(arr)
     { return arr.sex === 'male';
     }
- console.log('\n Visi vyrai:')
+ console.log('\n %cVisi vyrai:', 'color: red')
     console.table(people.filter(printMales));
   }
   console.groupEnd();
@@ -134,14 +134,14 @@ const people = [
     function printFemales(arr)
     { return arr.sex === 'female';
     }
- console.log('\n Visos moterys:')
+ console.log('\n %cVisos moterys:', 'color: red')
     console.table(people.filter(printFemales));
   }
   console.groupEnd();
   
   console.group('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
   {
-    // ...sprendimas ir spausdinimas
+    
   }
   console.groupEnd();
   
