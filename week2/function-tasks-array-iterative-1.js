@@ -69,20 +69,27 @@ const people = [
   
   console.group('2. Atpausdinkite visus žmonių vardus ir pavardes, atskirtus brūkšneliu');
   {
-    function printInLines(arr)
+    function printNameSurname(arr)
     {
         arr.forEach(el => {
             console.log(`${el.name}-${el.surname}`);
         });
     }
 
-printInLines(people);
+    printNameSurname(people);
   }
   console.groupEnd();
   
   console.group('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
   {
-    // ...sprendimas ir spausdinimas
+    function printNameSurnameStatus(arr)
+    {
+        arr.forEach(el => {
+            console.log(`${el.name} ${el.surname}  \n married (true/false): ${el.married}`);
+        });
+    }
+
+    printNameSurnameStatus(people);
   }
   console.groupEnd();
   
