@@ -354,7 +354,23 @@ const students = [
   
   console.group('10. Atspausdinti visų Chemijos fakulteto studentų vidurkius');
   {
-    // ... sprendimas ir spausdinimas
+    function studentChemistryAvg(array)
+    {
+        const ans = array.filter(info => info.faculty == "Chemijos fakultetas");
+        ans.forEach(student => {
+          let allAvg = 0;
+          let count = 0;
+          student.modules.forEach(mod => {
+           let sumMark = mod.marks.reduce((ac, v) => ac + v, 0);
+           allAvg = allAvg + sumMark;
+           count= count + mod.marks.length;
+          });
+          allAvg = allAvg / count;
+          console.log(`${student.name} ${student.surname} \nBendras vidurkis: %c${allAvg.toFixed(2)}`, 'color: red');
+       });
+      }
+  
+      studentChemistryAvg(students);
   }
   console.groupEnd();
   
