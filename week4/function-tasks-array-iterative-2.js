@@ -204,7 +204,7 @@ const students = [
   console.group('1. Atspausdinti visus Informatikos fakulteto studentus');
   {
 
-    function IT(array)
+   function IT(array)
     {
         let studentsIT = array.filter( (obj) => obj.faculty == "Informatikos fakultetas");
         studentsIT.forEach(student => { 
@@ -217,9 +217,17 @@ const students = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('2. Atspausdinti visus Chemijos fakulteto studentus');
+  console.group('2. Atspausdinti visus Chemijos fakulteto studentus');
   {
-    // ... sprendimas ir spausdinimas
+    function chemistry(array)
+    {
+        let studentsIT = array.filter( (obj) => obj.faculty == "Chemijos fakultetas");
+        studentsIT.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+    }
+
+    chemistry(students);
   }
   console.groupEnd();
   
