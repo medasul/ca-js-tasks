@@ -201,9 +201,18 @@ const students = [
   
   console.groupEnd();
   
-  console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
+  console.group('1. Atspausdinti visus Informatikos fakulteto studentus');
   {
 
+    function IT(array)
+    {
+        let studentsIT = array.filter( (obj) => obj.faculty == "Informatikos fakultetas");
+        studentsIT.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+    }
+
+   IT(students);
     
   }
   console.groupEnd();
