@@ -1,3 +1,5 @@
+console.groupCollapsed('--------- function-tasks-array-iterative-1 ---------------');
+  {
 const people = [
     {
       name: 'Jonas',
@@ -251,3 +253,5 @@ const people = [
     changedTOFUllname(people);
   }
   console.groupEnd();
+}
+console.groupEnd();

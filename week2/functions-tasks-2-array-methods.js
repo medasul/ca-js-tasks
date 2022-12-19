@@ -1,3 +1,6 @@
+console.groupCollapsed('-------------- functions-tasks-2-array-methods --------------------');
+    {
+
 // ----------------------Užduotys--------------------------
 const numbers = [1, 2, -2, 6, -5, 9, 1.02, 45, -69, 77, -12, 2, 8, -2, -4, 59, 7, -3];
 
@@ -313,4 +316,5 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd();
-   
+}
+console.groupEnd();

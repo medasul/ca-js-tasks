@@ -1,3 +1,5 @@
+console.groupCollapsed('---------object-tasks-------------------');
+{
 console.group('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
 {
     function sortDrinkByPrice(drink){
@@ -189,7 +191,7 @@ console.group('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
           console.log(calculateLosses(stolenItems3));
     }
 
-    
-   
 
+console.groupEnd();
+}
 console.groupEnd();
