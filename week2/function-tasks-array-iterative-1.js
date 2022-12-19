@@ -153,7 +153,13 @@ const people = [
   
   console.group('9. Atspausdinkite žmones kurie yra susituokę');
   {
-    // ...sprendimas ir spausdinimas
+    function printMarried(arr)
+    {   const ans = arr.filter(a => a.married === true  ).map(function(el){
+            console.log(`${el.name} ${el.surname}`)});
+
+    }
+ console.log('\n %cAll married people:', 'color: red')
+    printMarried(people);
   }
   console.groupEnd();
   
