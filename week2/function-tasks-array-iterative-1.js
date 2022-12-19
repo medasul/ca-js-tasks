@@ -93,9 +93,16 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
+  console.group('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
   {
-    // ...sprendimas ir spausdinimas
+    function printSexAndIncome(arr)
+    {
+        arr.forEach((el, i) => {
+            console.log(`${i+1}. ${el.sex} income - ${el.income}`);
+        });
+    }
+
+    printSexAndIncome(people);
   }
   console.groupEnd();
   
@@ -105,9 +112,9 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('6. Atspausdinkite visus vyrus');
+  console.group('6. Atspausdinkite visus vyrus');
   {
-    // ...sprendimas ir spausdinimas
+    
   }
   console.groupEnd();
   
