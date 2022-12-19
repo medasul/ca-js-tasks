@@ -258,20 +258,16 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-/*
+
     console.group('16. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų vidurkį');
     console.log('---');
     {
         function avgArr(arr) {
-            let sum=0;
-            let avg;
-            for (let i = 0; i < arr.length; i++) {
-                sum += arr[i];
-            }
-            avg = sum/arr.length;
-            return avg;
-        }
 
+        return ((arr.reduce((prevSum, el) => prevSum + el, 0)) / arr.length);     
+              }
+      
+            
          console.log({
            numbers,
           result: avgArr(numbers)
@@ -279,7 +275,7 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-
+/*
     console.group('17. Sukurti funkciją, kuri ima masyvą ir grąžina didžiausią skaičių masyve.');
     console.log('---');
     {
