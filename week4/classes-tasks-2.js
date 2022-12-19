@@ -1,3 +1,6 @@
+console.groupCollapsed('-------classes-tasks-2---------');
+{
+
 console.group('1. - https://edabit.com/challenge/ZngT4zDckDugt2JGY');
 {
 class Player {
@@ -280,7 +283,8 @@ console.log(PP.title)
 console.log(H.author," - ",  H.title)
 console.log(WP.author)
 
+}
+console.groupEnd();
 
 }
-
 console.groupEnd();

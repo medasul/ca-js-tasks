@@ -1,3 +1,5 @@
+console.groupCollapsed('---------function-tasks-array-iterative-2---------');
+{
 const students = [
     {
       name: 'Panatėja',
@@ -199,7 +201,6 @@ const students = [
     },
   ];
   
-  console.groupEnd();
   
   console.group('1. Atspausdinti visus Informatikos fakulteto studentus');
   {
@@ -395,3 +396,6 @@ const students = [
       studentElAvg(students);
   }
   console.groupEnd();
+
+}
+console.groupEnd();

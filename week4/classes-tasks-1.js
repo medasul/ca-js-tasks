@@ -1,3 +1,5 @@
+console.groupCollapsed('-------classes-tasks-1---------');
+{
 console.group(' Classes ');
 { 
     console.log('1. Sukurti klasę Automobilis');
@@ -74,6 +76,8 @@ console.log('5. Sumažinkite 2 Automobilio kaina 200e.');
 car2.priceLower(200);
 console.log(car2);
 
+}
+console.groupEnd();
 }
 console.groupEnd();
 
