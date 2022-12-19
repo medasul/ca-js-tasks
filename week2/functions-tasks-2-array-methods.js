@@ -275,15 +275,15 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-/*
+
     console.group('17. Sukurti funkciją, kuri ima masyvą ir grąžina didžiausią skaičių masyve.');
     console.log('---');
     {
         function arrMax(arr) {
             let numberMax=arr[0];
-            for (let i = 1; i < arr.length; i++) {
-                if(arr[i]>numberMax) numberMax = arr[i];
-            }
+            arr.forEach(function(a) {
+                if(a>numberMax) numberMax = a;})
+        
             return numberMax;
         }
 
@@ -294,7 +294,7 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-
+/*
     console.group('18. Sukurti funkciją, kuri ima masyvą ir grąžina mažiausią skaičių masyve.');
     console.log('---');
     {
