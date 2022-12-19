@@ -165,7 +165,18 @@ const people = [
   
   console.group('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
   {
-    // ...sprendimas ir spausdinimas
+    function driversBySex(arr) {
+        let m=f=0;
+        const males = arr.filter(a => a.hasCar === true  ).filter(s => s.sex === 'male'  ).map(function(el){return m++;});
+        const females = arr.filter(a => a.hasCar === true  ).filter(s => s.sex === 'female' ).map(function(el){return f++;});
+        return {
+          'male drivers' : m,
+          'female drivers' : f
+         
+        };
+      }
+      
+      console.log(driversBySex(people)); 
   }
   console.groupEnd();
   
