@@ -59,7 +59,7 @@ const people = [
     function printInLines(arr)
         {
             arr.forEach(el => {
-                console.log(el.name);
+                console.log(el);
             });
         }
 
@@ -67,9 +67,16 @@ const people = [
   }
   console.groupEnd();
   
-  console.group('2. Atpausdinkite visus žmonių varus ir pavardes, atskirtus brūkšneliu');
+  console.group('2. Atpausdinkite visus žmonių vardus ir pavardes, atskirtus brūkšneliu');
   {
-    // ...sprendimas ir spausdinimas
+    function printInLines(arr)
+    {
+        arr.forEach(el => {
+            console.log(`${el.name}-${el.surname}`);
+        });
+    }
+
+printInLines(people);
   }
   console.groupEnd();
   
