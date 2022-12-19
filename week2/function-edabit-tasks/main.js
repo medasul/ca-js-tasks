@@ -148,13 +148,76 @@ console.log(secondLargest([25, 143, 89, 13, 105])) // ➞ 105
 console.log(secondLargest([54, 23, 11, 17, 10]) ) //➞ 23
 }
 console.groupEnd();
+////
+console.group('8. https://edabit.com/challenge/Dq8kbbsLYyG9are5Z');
+{ console.log('\n-----Total Volume of All Boxes------')
 
-console.group(' ');
-{ console.log('\n-----Find the Smallest and Biggest Numbers------')
-    
+function totalVolume(...boxes) {
+  let sum=0;
+	for (let i=0; i<boxes.length; i++) {
+		sum+=boxes[i][0] * boxes[i][1] * boxes[i][2];
+	}
+	console.log(sum);
+}
+totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]) //➞ 63
+totalVolume([2, 2, 2], [2, 1, 1]) //➞ 10
+totalVolume([1, 1, 1]) //➞ 1
+}
+console.groupEnd();
+
+console.group('9. https://edabit.com/challenge/PWqkt9HiLcJSr6QEY');
+{ console.log('\n-----Sum of Number Elements in an Array------')
+   
+function numbersSum(arr) {
+let sum=0;
+	for(let i=0; i<=arr.length; i++){
+		if(typeof arr[i] === "number")
+			sum+=arr[i];
+	}
+console.log(sum);	}
+
+numbersSum([1, 2, "13", "4", "645"]) //➞ 3
+numbersSum([true, false, "123", "75"]) //➞ 0
+numbersSum([1, 2, 3, 4, 5, true]) //➞ 15
 
 }
 console.groupEnd();
+
+console.group('10. https://edabit.com/challenge/RiyXDZNZAD4fj9xfJ');
+{ console.log('\n-----Clone an Array------')
+    
+function clone(array) {
+  let copy = array.slice();
+  array.push(copy);
+  console.log( array);
+}
+
+clone([1, 1])// ➞ [1, 1, [1, 1]]
+clone([1, 2, 3])// ➞ [1, 2, 3, [1, 2, 3]]
+clone(["x", "y"]) //➞ ["x", "y", ["x", "y"]]
+
+}
+console.groupEnd();
+
+console.group('11. https://edabit.com/challenge/3Efavz8YmSBia4p8s ');
+{ console.log('\n-----Index Multiplier------')
+    
+function indexMultiplier(arr) {
+	let sum=0;
+	for(let i=0; i<arr.length; i++){
+		sum+=arr[i]*i;
+	}
+	console.log(sum);
+}
+
+indexMultiplier([1, 2, 3, 4, 5]) //➞ 40
+// (1*0 + 2*1 + 3*2 + 4*3 + 5*4)
+indexMultiplier([-3, 0, 8, -6]) //➞ -2
+// (-3*0 + 0*1 + 8*2 + -6*3)
+}
+console.groupEnd();
+
+
 
 /*
 
