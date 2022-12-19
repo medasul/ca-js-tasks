@@ -250,34 +250,43 @@ const students = [
   {
     function firstCourseStudents(array)
     {
-        let firstCourse = array.filter( (obj) => obj.course == 1);
+        let firstCourse = array.filter( (obj) => obj.course === 1);
         firstCourse.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
     }
 
-    firstCourseStudents(students);  }
+    firstCourseStudents(students); 
+   }
   console.groupEnd();
   
   console.group('5. Atspausdinti tik antro kurso studentus');
   {
-    // ... sprendimas ir spausdinimas
+    function firstCourseStudents(array)
+    {
+        let firstCourse = array.filter( (obj) => obj.course === 2);
+        firstCourse.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+    }
+
+    firstCourseStudents(students);  
   }
   console.groupEnd();
   
-  console.groupCollapsed('6. Atspausdinti tik trečio kurso studentus');
+  console.group('6. Atspausdinti tik trečio kurso studentus');
   {
     // ... sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('7. Atspausdinti tik ketvirto kurso studentus');
+  console.group('7. Atspausdinti tik ketvirto kurso studentus');
   {
     // ... sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
+  console.group('8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
   {
     // ... sprendimas ir spausdinimas
   }
