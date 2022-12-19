@@ -206,14 +206,48 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
+  console.group('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
   {
-    // ...sprendimas ir spausdinimas
+    function newArrayWithoutSexNameSurname(arr)
+    {
+          const newArray = arr.map(obj => {
+            return {
+              age: obj.age,
+              salary: obj.income,
+              married: obj.married,
+              hasCar: obj.hasCar
+              
+            }
+          });
+          
+          console.log (newArray);
+         
+    }
+
+    newArrayWithoutSexNameSurname(people);
   }
   console.groupEnd();
   
-  console.groupCollapsed('13. Suformuokite žmonių masyvą  iš objektų, kuriuose "name" ir "surname" savybės, būtų pakeistos "fullname" savybe');
+  console.group('13. Suformuokite žmonių masyvą  iš objektų, kuriuose "name" ir "surname" savybės, būtų pakeistos "fullname" savybe');
   {
-    // ...sprendimas ir spausdinimas
+    function changedTOFUllname(arr)
+    {
+          const newArray = arr.map(obj => {
+            return {
+            fullname : obj.name + " " + obj.surname,
+              sex: obj.sex,
+              age: obj.age,
+              salary: obj.income,
+              married: obj.married,
+              hasCar: obj.hasCar
+              
+            }
+          });
+          
+          console.log(newArray);
+         
+    }
+
+    changedTOFUllname(people);
   }
   console.groupEnd();
