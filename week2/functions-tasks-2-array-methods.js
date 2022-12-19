@@ -294,15 +294,15 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd()
-/*
+
     console.group('18. Sukurti funkciją, kuri ima masyvą ir grąžina mažiausią skaičių masyve.');
     console.log('---');
     {
         function arrMin(arr) {
             let numberMin=arr[0];
-            for (let i = 1; i < arr.length; i++) {
-                if(arr[i]<numberMin) numberMin = arr[i];
-            }
+            arr.forEach(function(a) {
+                if(a<numberMin) numberMin = a;})
+        
             return numberMin;
         }
 
@@ -313,4 +313,4 @@ console.log('---');
     }
     console.log('---');
     console.groupEnd();
-   */
+   
