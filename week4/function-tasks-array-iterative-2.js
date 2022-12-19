@@ -231,19 +231,28 @@ const students = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
+  console.group('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
+  {
+    function El(array)
+    {
+        let studentsIT = array.filter( (obj) => obj.faculty == "Elektros ir elektronikos fakultetas");
+        studentsIT.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+    }
+
+    El(students);
+  
+  }
+  console.groupEnd();
+  
+  console.group('4. Atspausdinti tik pirmo kurso studentus');
   {
     // ... sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('4. Atspausdinti tik pirmo kurso studentus');
-  {
-    // ... sprendimas ir spausdinimas
-  }
-  console.groupEnd();
-  
-  console.groupCollapsed('5. Atspausdinti tik antro kurso studentus');
+  console.group('5. Atspausdinti tik antro kurso studentus');
   {
     // ... sprendimas ir spausdinimas
   }
