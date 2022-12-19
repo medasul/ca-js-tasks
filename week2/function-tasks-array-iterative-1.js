@@ -54,19 +54,26 @@ const people = [
       hasCar: false
     }
   ];
-  console.groupCollapsed('1. Atspausdinkite visus žmones eilutėmis');
+  console.group('1. Atspausdinkite visus žmones eilutėmis');
+  {
+    function printInLines(arr)
+        {
+            arr.forEach(el => {
+                console.log(el.name);
+            });
+        }
+
+    printInLines(people);
+  }
+  console.groupEnd();
+  
+  console.group('2. Atpausdinkite visus žmonių varus ir pavardes, atskirtus brūkšneliu');
   {
     // ...sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('2. Atpausdinkite visus žmonių varus ir pavardes, atskirtus brūkšneliu');
-  {
-    // ...sprendimas ir spausdinimas
-  }
-  console.groupEnd();
-  
-  console.groupCollapsed('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
+  console.group('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
   {
     // ...sprendimas ir spausdinimas
   }
