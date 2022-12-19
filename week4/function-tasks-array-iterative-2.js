@@ -221,8 +221,8 @@ const students = [
   {
     function chemistry(array)
     {
-        let studentsIT = array.filter( (obj) => obj.faculty == "Chemijos fakultetas");
-        studentsIT.forEach(student => { 
+        let studentsChemistry = array.filter( (obj) => obj.faculty == "Chemijos fakultetas");
+        studentsChemistry.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
     }
@@ -235,8 +235,8 @@ const students = [
   {
     function El(array)
     {
-        let studentsIT = array.filter( (obj) => obj.faculty == "Elektros ir elektronikos fakultetas");
-        studentsIT.forEach(student => { 
+        let studentsEl = array.filter( (obj) => obj.faculty == "Elektros ir elektronikos fakultetas");
+        studentsEl.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
     }
@@ -248,8 +248,15 @@ const students = [
   
   console.group('4. Atspausdinti tik pirmo kurso studentus');
   {
-    // ... sprendimas ir spausdinimas
-  }
+    function firstCourseStudents(array)
+    {
+        let firstCourse = array.filter( (obj) => obj.course == 1);
+        firstCourse.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+    }
+
+    firstCourseStudents(students);  }
   console.groupEnd();
   
   console.group('5. Atspausdinti tik antro kurso studentus');
