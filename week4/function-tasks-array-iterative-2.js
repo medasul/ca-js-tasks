@@ -210,6 +210,7 @@ const students = [
         studentsIT.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
+        
     }
 
    IT(students);
@@ -254,6 +255,7 @@ const students = [
         firstCourse.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
+        if(firstCourse.length === 0) {console.log ("Nėra pirmojo kurso studentų")}
     }
 
     firstCourseStudents(students); 
@@ -262,21 +264,32 @@ const students = [
   
   console.group('5. Atspausdinti tik antro kurso studentus');
   {
-    function firstCourseStudents(array)
+    function secondCourseStudents(array)
     {
-        let firstCourse = array.filter( (obj) => obj.course === 2);
-        firstCourse.forEach(student => { 
+        let secondCourse = array.filter( (obj) => obj.course === 2);
+        secondCourse.forEach(student => { 
             console.log(`${student.name} ${student.surname}`); 
         });
+        if(secondCourse.length === 0) {console.log ("Nėra antrojo kurso studentų")}
     }
 
-    firstCourseStudents(students);  
+    secondCourseStudents(students);  
   }
   console.groupEnd();
   
   console.group('6. Atspausdinti tik trečio kurso studentus');
   {
-    // ... sprendimas ir spausdinimas
+    function thirdCourseStudents(array)
+    {
+        let thirdCourse = array.filter( (obj) => obj.course === 3);
+        thirdCourse.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+        if(thirdCourse.length === 0) {console.log ("Nėra trečiojo kurso studentų")}
+
+    }
+
+    thirdCourseStudents(students);  
   }
   console.groupEnd();
   
