@@ -149,6 +149,13 @@ console.log(secondLargest([54, 23, 11, 17, 10]) ) //➞ 23
 }
 console.groupEnd();
 
+console.group(' ');
+{ console.log('\n-----Find the Smallest and Biggest Numbers------')
+    
+
+}
+console.groupEnd();
+
 /*
 
 console.group(' ');

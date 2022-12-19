@@ -311,7 +311,22 @@ const students = [
   
   console.group('8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
   {
-   
+    function studentAvg(array)
+    {
+      array.forEach(student => {
+        let allAvg = 0;
+        let count = 0;
+        student.modules.forEach(mod => {
+         let sumMark = mod.marks.reduce((ac, v) => ac + v, 0);
+         allAvg = allAvg + sumMark;
+         count= count + mod.marks.length;
+        });
+        allAvg = allAvg / count;
+        console.log(student.name+" "+student.surname+"\nvidurkis: "+allAvg.toFixed(2)+"\n");
+     });
+    }
+
+    studentAvg(students);
   }
   
   console.group('9. Atspausdinti visų Informatikos fakulteto studentų vidurkius');
