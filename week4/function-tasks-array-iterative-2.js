@@ -334,7 +334,7 @@ const students = [
     {
       function studentITAvg(array)
     {
-        const ans = array.filter(info => info.faculty == "Informatikos fakultetas");
+        const ans = array.filter(a => a.faculty == "Informatikos fakultetas");
         ans.forEach(student => {
           let allAvg = 0;
           let count = 0;
@@ -356,7 +356,7 @@ const students = [
   {
     function studentChemistryAvg(array)
     {
-        const ans = array.filter(info => info.faculty == "Chemijos fakultetas");
+        const ans = array.filter(a => a.faculty == "Chemijos fakultetas");
         ans.forEach(student => {
           let allAvg = 0;
           let count = 0;
@@ -376,6 +376,22 @@ const students = [
   
   console.group('11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius');
   {
-    // ... sprendimas ir spausdinimas
+    function studentElAvg(array)
+    {
+        const ans = array.filter(a => a.faculty == "Elektros ir elektronikos fakultetas");
+        ans.forEach(student => {
+          let allAvg = 0;
+          let count = 0;
+          student.modules.forEach(mod => {
+           let sumMark = mod.marks.reduce((ac, v) => ac + v, 0);
+           allAvg = allAvg + sumMark;
+           count= count + mod.marks.length;
+          });
+          allAvg = allAvg / count;
+          console.log(`${student.name} ${student.surname} \nBendras vidurkis: %c${allAvg.toFixed(2)}`, 'color: red');
+       });
+      }
+  
+      studentElAvg(students);
   }
   console.groupEnd();
