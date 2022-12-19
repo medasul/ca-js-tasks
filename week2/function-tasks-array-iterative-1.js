@@ -141,7 +141,13 @@ const people = [
   
   console.group('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
   {
-    
+    function printCarOwners(arr)
+    {   const ans = arr.filter(a => a.hasCar === true  ).map(function(el){
+            console.log(`${el.name} ${el.surname}`)});
+
+    }
+ console.log('\n %cAll car owners:', 'color: red')
+    printCarOwners(people);
   }
   console.groupEnd();
   
