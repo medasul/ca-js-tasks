@@ -104,16 +104,48 @@ console.groupEnd();
 
 //medium
 
-console.group('https://edabit.com/challenge/GLbuMfTtDWwDv2F73');
+console.group('6. https://edabit.com/challenge/GLbuMfTtDWwDv2F73');
 { console.log('\n-----How Much is True?------')
     
 function countTrue(arr) {
-  return arr.filter((el)=> el===true).length
+ // return arr.filter((el)=> el===true).length
+ let num = 0;
+	for(let i = 0; i < arr.length; i++){
+		if(arr[i] === true){
+			num++;
+		}
+	}
+  return num;
 }
 
 console.log(countTrue([true, false, false, true, false])) // ➞ 2
 console.log(countTrue([false, false, false, false])) // ➞ 0
 console.log(countTrue([]) ) // ➞ 0
+}
+console.groupEnd();
+
+console.group('7. https://edabit.com/challenge/3zAT89ZAxg4CAQqsZ ');
+{ console.log('\n-----Find the Second Largest Number------')
+    
+function secondLargest(arr) {
+  let largest = arr[0];
+let secondLargest = arr[0];
+for (let i = 1; i < arr.length; i++) {
+  if ( i === 1 && arr[i]<arr[0]) (secondLargest = arr[i]);
+  if (arr[i] > largest) {
+    secondLargest = largest;
+    largest = arr[i];
+  } else if (arr[i] > secondLargest && arr[i] >! largest) {
+    secondLargest = arr[i];
+  }
+}
+return secondLargest;
+
+}
+
+console.log(secondLargest([10, 40, 30, 20, 50])) // ➞ 40
+console.log(secondLargest([25, 143, 89, 13, 105])) // ➞ 105
+console.log(secondLargest([54, 23, 11, 17, 10]) ) //➞ 23
 }
 console.groupEnd();
 
