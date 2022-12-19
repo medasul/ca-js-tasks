@@ -247,7 +247,7 @@ console.log('---');
     console.log('---');
     {
         function sumArr(arr) {
-          arr.reduce()
+          return arr.reduce((prevSum, el) => prevSum + el, 0);
             
         }
 

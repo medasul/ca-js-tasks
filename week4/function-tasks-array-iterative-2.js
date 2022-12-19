@@ -295,28 +295,38 @@ const students = [
   
   console.group('7. Atspausdinti tik ketvirto kurso studentus');
   {
-    // ... sprendimas ir spausdinimas
+    function fourthCourseStudents(array)
+    {
+        let fourthCourse = array.filter( (obj) => obj.course === 4);
+        fourthCourse.forEach(student => { 
+            console.log(`${student.name} ${student.surname}`); 
+        });
+        if(fourthCourse.length === 0) {console.log ("Nėra ketvirtojo kurso studentų")}
+
+    }
+
+    fourthCourseStudents(students);  
   }
   console.groupEnd();
   
   console.group('8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius');
   {
-    // ... sprendimas ir spausdinimas
+   
   }
   
-  console.groupCollapsed('9. Atspausdinti visų Informatikos fakulteto studentų vidurkius');
+  console.group('9. Atspausdinti visų Informatikos fakulteto studentų vidurkius');
   {
     // ... sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('10. Atspausdinti visų Chemijos fakulteto studentų vidurkius');
+  console.group('10. Atspausdinti visų Chemijos fakulteto studentų vidurkius');
   {
     // ... sprendimas ir spausdinimas
   }
   console.groupEnd();
   
-  console.groupCollapsed('11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius');
+  console.group('11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius');
   {
     // ... sprendimas ir spausdinimas
   }
