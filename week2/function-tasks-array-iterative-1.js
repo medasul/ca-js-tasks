@@ -180,9 +180,19 @@ const people = [
   }
   console.groupEnd();
   
-  console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
+  console.group('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary');
   {
-    // ...sprendimas ir spausdinimas
+
+    function incomeToSalary(arr)
+    {
+        arr.forEach((el, i) => {
+            const sal = 'salary';
+           arr[i].income = sal;
+            console.log(arr[i]);
+        });
+    }
+
+    incomeToSalary(people);
   }
   console.groupEnd();
   
