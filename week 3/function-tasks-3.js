@@ -5,16 +5,17 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
 {
   // Funkcijos deklaravimas
   function printCapital(str) {
-    // code ...
+    const capitalText = str.toUpperCase();
+    console.log(capitalText);
   }
-  // console.log('---');
-  // console.log("abcd");
-  // printCapital("abcd");
-  // console.log("AAAA");
-  // printCapital("AAAA");
-  // console.log("aBcD");
-  // printCapital("aBcD");
-  // console.log('---');
+   console.log('---');
+   console.log("abcd");
+   printCapital("abcd");
+   console.log("AAAA");
+   printCapital("AAAA");
+   console.log("aBcD");
+   printCapital("aBcD");
+   console.log('---');
 }
 console.groupEnd();
 console.log();
