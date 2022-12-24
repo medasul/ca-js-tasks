@@ -71,101 +71,122 @@ console.group("-------functions-tasks-3.js [užduotys 1-27]------");
     {
         // Funkcijos deklaravimas
         function printMiddleLetter(str) {
-            const middleLetter = Math.round((str.length-1) / 2);
-            if((str.length-1) % 2 !==0) console.log(`%cNėra viduriniosios raidės `, "color:red")
+            const middleLetter = Math.round((str.length - 1) / 2);
+            if ((str.length - 1) % 2 !== 0) console.log(`%cNėra viduriniosios raidės `, "color:red")
             else console.log(`%c${str[middleLetter]} `, "color:red");
         }
+        console.log('---');
+        console.log("Labas");
+        printMiddleLetter('Labas');
+        console.log("Tu");
+        printMiddleLetter('Tu');
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+
+    console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių");
+    {
+        function getDoubleLetterCount(str) {
+            let result = 0;
+
+            for (let i = 0; i < str.length - 1; i++) {
+                if (str[i] === str[i + 1]) {
+                    result++;
+                }
+            }
+
+            return result;
+        }
+        console.log('---');
+        console.log({
+            'labbas': getDoubleLetterCount('labbas'),
+            'kkkranas': getDoubleLetterCount('kkkranas'),
+            'kebabas': getDoubleLetterCount('kebabas'),
+        })
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių padaugintą iš dviejų");
+    {
+        function getDoubleLetterCount(str) {
+            let result = 0;
+
+            for (let i = 0; i < str.length - 1; i++) {
+                if (str[i] === str[i + 1]) {
+                    result++;
+                }
+            }
+
+            return result*2;
+        }
+        console.log('---');
+        console.log({
+            'labbas': getDoubleLetterCount('labbas'),
+            'kkkranas': getDoubleLetterCount('kkkranas'),
+            'kebabas': getDoubleLetterCount('kebabas'),
+        })
+        console.log('---');
+     
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro bendrą simbolių skaičių");
+    {
+        function getArgsLetterSum(a, b) {
+            return (a.length+b.length);
+    
+        }
+
          console.log('---');
-         console.log("Labas");
-         printMiddleLetter('Labas');
-         console.log("Tu");
-         printMiddleLetter('Tu');
+         console.log({
+           'labas, abc': getArgsLetterSum('labas', 'abc'),
+           'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
+           'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
+         })
          console.log('---');
     }
     console.groupEnd();
     console.log();
 
-    /*
-    console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių");
-    {
-      function getDoubleLetterCount(str) {
-        // code ...
-      }
-      // console.log('---');
-      // console.log({
-      //   'labas': getDoubleLetterCount('labas'),
-      //   'kranas': getDoubleLetterCount('kranas'),
-      //   'kebabas': getDoubleLetterCount('kebabas'),
-      // })
-      // console.log('---');
-    }
-    console.groupEnd();
-    console.log();
-    
-    console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių padaugintą iš dviejų");
-    {
-      function getDoubleLetterCount(str) {
-        // code ...
-      }
-      // console.log('---');
-      // console.log({
-      //   'labas': getDoubleLetterCount('labas'),
-      //   'kranas': getDoubleLetterCount('kranas'),
-      //   'kebabas': getDoubleLetterCount('kebabas'),
-      // })
-      // console.log('---');
-    }
-    console.groupEnd();
-    console.log();
-    
-    console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro bendrą simbolių skaičių");
-    {
-      function getArgsLetterSum(a, b) {
-        // code ...
-      }
-      // console.log('---');
-      // console.log({
-      //   'labas, abc': getArgsLetterSum('labas', 'abc'),
-      //   'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
-      //   'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
-      // })
-      // console.log('---');
-    }
-    console.groupEnd();
-    console.log();
-    
     console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>");
     {
-      function containsLetterA(str) {
-        // code ...
-      }
-      // console.log('---');
-      // console.log({
-      //   'labas': containsLetterA('labas'),
-      //   'kempė': containsLetterA('kempė'),
-      //   'Finakolė': containsLetterA('Finakolė'),
-      // })
-      // console.log('---');
+        function containsLetterA(str) {
+          const ans = (str.indexOf('a') > -1);
+            return ans;
+        }
+         console.log('---');
+         console.log({
+           'labas': containsLetterA('labas'),
+           'kempė': containsLetterA('kempė'),
+           'Finakolė': containsLetterA('Finakolė'),
+         })
+         console.log('---');
     }
     console.groupEnd();
     console.log();
-    
+
     console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false");
     {
-      function containsLetter(str, letter) {
-        // code ...
-      }
-      // console.log('---');
-      // console.log({
-      //   'labas, a': containsLetter('labas', 'a'),
-      //   'kempė, a': containsLetter('kempė', 'a'),
-      //   'Finakolė, u': containsLetter('Finakolė', 'u'),
-      // })
-      // console.log('---');
+        function containsLetter(str, letter) {
+            const ans = (str.indexOf(letter) > -1);
+            return ans;
+        }
+         console.log('---');
+         console.log({
+           'labas, a': containsLetter('labas', 'a'),
+           'kempė, a': containsLetter('kempė', 'a'),
+           'Finakolė, u': containsLetter('Finakolė', 'u'),
+         })
+         console.log('---');
     }
     console.groupEnd();
     console.log();
-    
+    /*
     console.group("11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra lyginis skaičius simbolių");
     {
       function isEvenNumberOfLetters(str) {
