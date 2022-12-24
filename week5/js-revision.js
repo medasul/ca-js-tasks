@@ -1,6 +1,6 @@
 
 
-console.group('----- js-revision ------ ');
+console.groupCollapsed('----- js-revision ------ ');
 {
 
 //------------------------------------ 1 Dalis ------------------------------------ 
