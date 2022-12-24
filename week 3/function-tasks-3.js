@@ -397,10 +397,11 @@ console.group("-------functions-tasks-3.js [užduotys 1-27]------");
         function removeFirstLetterA(str) {
             const indexOfFirstA = str.toLowerCase().indexOf('a');
 
-            if (indexOfFirstA !== -1) {return (str.substring(0, indexOfFirstA) + str.substring(indexOfFirstA + 1))
+            if (indexOfFirstA !== -1) {
+                return (str.substring(0, indexOfFirstA) + str.substring(indexOfFirstA + 1))
             }
 
-            else {return str};
+            else { return str };
         }
         console.log('---');
         console.log({
@@ -412,102 +413,132 @@ console.group("-------functions-tasks-3.js [užduotys 1-27]------");
     }
     console.groupEnd();
     console.log();
-    /*
-        console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
-        {
-            function removeLastLetterA(str) {
-                // code ...
+    //
+    console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
+    {
+        function removeLastLetterA(str) {
+            const indexOfLastA = str.toLowerCase().lastIndexOf('a');
+
+            if (indexOfLastA !== -1) {
+                return (str.substring(0, indexOfLastA) + str.substring(indexOfLastA + 1))
             }
-            // console.log('---');
-            // console.log({
-            //   'labas': removeLastLetterA('labas'),
-            //   'kempiniukas': removeLastLetterA('kempiniukas'),
-            //   '123123': removeLastLetterA('123123'),
-            // })
-            // console.log('---');
+
+            else { return str };
         }
-        console.groupEnd();
-        console.log();
-    
-        console.group("23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje");
-        {
-            function removeAllOccurencesOfLetterA(str) {
-                // code ...
+        console.log('---');
+        console.log({
+            'labas': removeLastLetterA('labas'),
+            'kempiniukas': removeLastLetterA('kempiniukas'),
+            '1a23a12a3': removeLastLetterA('1a23a12a3'),
+        })
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje");
+    {
+        function removeAllOccurencesOfLetterA(str) {
+
+            let firstOccuranceIndex = str.search(/\a/) + 1;
+
+            let ans = str.substr(0, firstOccuranceIndex) + str.slice(firstOccuranceIndex).replace(/\a/g, '');
+
+            return ans;
+        }
+        console.log('---');
+        console.log({
+            'labaaaas': removeAllOccurencesOfLetterA('labaaaas'),
+            'akempiniukas': removeAllOccurencesOfLetterA('akempiniukas'),
+            '1a2312aa3': removeAllOccurencesOfLetterA('1a2312aa3'),
+        })
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("24. Sukurkite funkciją, kuri ištrintų visus, vartotojo įvestos raidės pasikartojimus žodyje");
+    {
+        function removeAllOccurencesOfLetter(str, letter) {
+            let re = new RegExp(letter, "g");
+            let firstOccuranceIndex1 = str.search(re) + 1;
+
+            let ans = str.substr(0, firstOccuranceIndex1) + str.slice(firstOccuranceIndex1).replace(re, '');
+
+            return ans;
+        }
+        console.log('---');
+        console.log({
+            'labas, a': removeAllOccurencesOfLetter('labas', 'a'),
+            'kempiniukas, i': removeAllOccurencesOfLetter('kempiniukas', 'i'),
+            '123123, 3': removeAllOccurencesOfLetter('123123', '3'),
+        })
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    // 25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.
+    //  Ši funkcija turi žodyje ištrinti visas raides, kurios perduotos antruoju parametru.
+    //  Atlikus veiksmus, grąžinti pakeistą žodį
+    console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
+    {
+        function filterLetters(str, lettersToRemove) {
+
+
+            for (let i = 0; i < str.length; i++) {
+                if (lettersToRemove.includes(str[i])) {
+                    str = str.substr(0, i) + str.substr(i + 1);
+                }
             }
-            // console.log('---');
-            // console.log({
-            //   'labas': removeAllOccurencesOfLetterA('labas'),
-            //   'kempiniukas': removeAllOccurencesOfLetterA('kempiniukas'),
-            //   '123123': removeAllOccurencesOfLetterA('123123'),
-            // })
-            // console.log('---');
+
+            return str;
         }
-        console.groupEnd();
-        console.log();
-    
-        console.group("24. Sukurkite funkciją, kuri ištrintų visus, vartotojo įvestos raidės pasikartojimus žodyje");
-        {
-            function removeAllOccurencesOfLetter(str, letter) {
-                // code ...
+        console.log('---');
+        const str1 = filterLetters('Brangakmenio paveikslas', ['a', 'i']);
+        console.log(str1);
+        console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį");
+    {
+        function replaceSpaceWithDash(str) {
+            return str.replaceAll(' ', "-")
+        }
+         console.log('---');
+         console.log({
+           'viens du trys': replaceSpaceWithDash('viens du trys'),
+           'as tave myliu': replaceSpaceWithDash('as tave myliu'),
+           'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
+         })
+         console.log('---');
+    }
+    console.groupEnd();
+    console.log();
+
+    console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
+    {
+        function capitalize(str) {
+            const words = str.split(" ");
+            const ans = [];
+            for (let i = 0; i < words.length; i++) {
+              ans.push(words[i][0].toUpperCase() + words[i].slice(1));
             }
-            // console.log('---');
-            // console.log({
-            //   'labas, a': removeAllOccurencesOfLetter('labas', 'a'),
-            //   'kempiniukas, i': removeAllOccurencesOfLetter('kempiniukas', 'i'),
-            //   '123123, 3': removeAllOccurencesOfLetter('123123', '3'),
-            // })
-            // console.log('---');
+          
+            return ans.join(" ");
         }
-        console.groupEnd();
-        console.log();
-    
-        // 25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.
-        //  Ši funkcija turi žodyje ištrinti visas raides, kurios perduotos antruoju parametru.
-        //  Atlikus veiksmus, grąžinti pakeistą žodį
-        console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
-        {
-            function filterLetters(str, lettersToRemove) {
-                // code ...
-            }
-            // console.log('---');
-            // const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
-            // console.log(str);
-            // console.log('---');
-        }
-        console.groupEnd();
-        console.log();
-    
-        console.group("26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį");
-        {
-            function replaceSpaceWithDash(str) {
-                // code ...
-            }
-            // console.log('---');
-            // console.log({
-            //   'viens du trys': replaceSpaceWithDash('viens du trys'),
-            //   'as tave myliu': replaceSpaceWithDash('as tave myliu'),
-            //   'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
-            // })
-            // console.log('---');
-        }
-        console.groupEnd();
-        console.log();
-    
-        console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
-        {
-            function capitalize(str) {
-                // code ...
-            }
-            // console.log('---');
-            // console.log({
-            //   'viens du trys': capitalize('viens du trys'),
-            //   'as tave myliu': capitalize('as tave myliu'),
-            //   'Bairis seniuk': capitalize('Bairis seniuk'),
-            // })
-            // console.log('---');
-        }
-        console.groupEnd();
-    
-    */
+         console.log('---');
+         console.log({
+           'viens du trys': capitalize('viens du trys'),
+           'as tave myliu': capitalize('as tave myliu'),
+           'Bairis seniuk': capitalize('Bairis seniuk'),
+         })
+         console.log('---');
+    }
+    console.groupEnd();
+
+
 }
 console.groupEnd();
