@@ -1,5 +1,5 @@
 
-console.group('---- functions-tasks-3.js [užduotys 28-32] ----');
+console.groupCollapsed('---- functions-tasks-3.js [užduotys 28-32] ----');
 {
 
     console.group("28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'abc' -> 'cba'");
