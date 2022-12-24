@@ -31,23 +31,23 @@ console.group('---- functions-tasks-3.js [užduotys 28-32] ----');
     console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
     {
       function isPalyndrome(str) {
-        let i = 0;
-        let k = str.length - 1;
-        while (i < k) {
-          if (str[i] !== str[k]) return false;
-          i++;
-          k--;
+        let ans = "";
+ 
+        for (let i = str.length - 1; i >= 0; i--) { 
+            ans += str[i]; 
         }
-        return true;
+       ;
+          if (str !== ans) return false;
+         else return true;
       }
-      // console.log('---');
-      // console.log({
-      //   'mama': isPalyndrome('mama'),
-      //   'mamam': isPalyndrome('mamam'),
-      //   '123321': isPalyndrome('123321'),
-      //   '123456': isPalyndrome('123456'),
-      // })
-      // console.log('---');
+       console.log('---');
+       console.log({
+         'mama': isPalyndrome('mama'),
+         'mamam': isPalyndrome('mamam'),
+         '123321': isPalyndrome('123321'),
+         '123456': isPalyndrome('123456'),
+       })
+       console.log('---');
     }
     console.groupEnd();
     console.log();
