@@ -1,5 +1,5 @@
 
-console.group("-------functions-tasks-3.js [užduotys 1-27]------");
+console.groupCollapsed("-------functions-tasks-3.js [užduotys 1-27]------");
 {
     console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis");
     {
